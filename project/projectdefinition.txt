@@ -1,0 +1,19 @@
+// Supported platforms
+Platform=Win64;OSX
+
+// Type of project
+Type=DLL
+
+// API dependencies
+APIS=core.framework;cinema.framework
+
+// Enable some advanced classic API support; not needed for hybrid plugins
+C4D=true
+
+// Plug-in code-style check level
+stylecheck.level=0
+
+// Custom ID
+ModuleId=info.bokatius.switchcams
+
+INCLUDE=source/main.cpp; source/switch_cams.cpp; source/switch_cams.hpp; source/camdialog.cpp; source/camdialog.hpp

@@ -5,7 +5,7 @@
 #include "c4d_basedraw.h"
 #include "gui.h"
 
-Bool SwitchCams::Execute(BaseDocument* doc)
+Bool SwitchCams::Execute(BaseDocument* doc, GeDialog* parentManager)
 {
 	ApplicationOutput("Excute BaseDocument 1st line");
 	camdialog_.GetString(1, cam_name_);
@@ -24,14 +24,14 @@ Bool SwitchCams::Execute(BaseDocument* doc)
 	EventAdd();
 	return true;
 }
-Bool SwitchCams::ExecuteOptionID(BaseDocument* doc, Int32 plugid, Int32 subid)
+Bool SwitchCams::ExecuteOptionID(BaseDocument* doc, Int32 plugid, Int32 subid, GeDialog* parentManager)
 {
 	camdialog_.SetString(1, cam_name_);
 	camdialog_.Open(DLG_TYPE::ASYNC, ID, -1, -1, 400, 25);
 
 	return true;
 }
-Int32 SwitchCams::GetState(BaseDocument* doc)
+Int32 SwitchCams::GetState(BaseDocument* doc, GeDialog* parentManager)
 {
 	return 0xffffffff;
 }

@@ -1,6 +1,7 @@
 #pragma once
 #include "c4d_gui.h"
 
+using namespace cinema;
 
 struct CamDialog : GeDialog
 {
